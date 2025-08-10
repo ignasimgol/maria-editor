@@ -192,6 +192,25 @@ video {
     .social-link {
         font-size: 16px;
     }
+    
+    /* Grid en columna para móvil */
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        width: 100%;
+        height: auto;
+        margin: 40px 0;
+        margin-left: 0;
+    }
+    
+    .grid-item {
+        height: 50vh;
+    }
+    
+    .grid-item video {
+        object-fit: contain;
+        background: #000;
+    }
 }
 
 @media (max-width: 480px) {
@@ -205,5 +224,25 @@ video {
     
     p {
         font-size: 1rem;
+    }
+    
+    /* Grid en columna para móviles pequeños */
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        width: 100%;
+        height: auto;
+        margin: 40px 0;
+        margin-left: 0;
+
+    }
+    
+    .grid-item {
+        height: 40vh;
+    }
+    
+    .grid-item video {
+        object-fit: contain;
+        background: #000;
     }
 }
