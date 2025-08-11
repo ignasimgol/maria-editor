@@ -13,7 +13,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Pantalla de carga -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Cargando...</p>
+        </div>
+    </div>
+
+    <div class="container" id="main-content">
         <!-- Header con enlaces sociales -->
         <header>
             <nav>
@@ -36,7 +44,7 @@
             <p>Mi nombre es Maria y soy editora de video.</p>
             <p>Youtube ha sido desde siempre mi televisión, la plataforma en la que he consumido más contenido, y de la que tengo más referentes que me han inspirado siempre.</p>
             <div class="grid-item-header">
-                <video autoplay muted loop playsinline>
+                <video id="main-video" autoplay muted loop playsinline>
                     <source src="videos/editora.MP4" type="video/mp4">
                     Tu navegador no soporta el elemento video.
                 </video>

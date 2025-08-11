@@ -1,5 +1,34 @@
-// Smooth scrolling para navegación
+// Pantalla de carga y video principal
 document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const mainContent = document.getElementById('main-content');
+    const mainVideo = document.getElementById('main-video');
+    
+    // Función para ocultar la pantalla de carga
+    function hideLoadingScreen() {
+        loadingScreen.classList.add('hidden');
+        mainContent.classList.add('loaded');
+        
+        // Remover la pantalla de carga del DOM después de la transición
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }
+    
+    // Esperar a que el video esté listo para reproducir
+    if (mainVideo) {
+        mainVideo.addEventListener('canplaythrough', function() {
+            // Pequeño delay para asegurar que todo esté cargado
+            setTimeout(hideLoadingScreen, 300);
+        });
+        
+        // Fallback: ocultar después de 5 segundos máximo
+        setTimeout(hideLoadingScreen, 5000);
+    } else {
+        // Si no hay video, ocultar después de 1 segundo
+        setTimeout(hideLoadingScreen, 1000);
+    }
+    
     // Animación de entrada suave
     const sections = document.querySelectorAll('section');
     
