@@ -132,18 +132,43 @@ p {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     margin: 40px 0;
     margin-left: calc(-50vw + 50%);
-    gap: 0;
+    gap: 20px;
+    padding: 20px;
 }
 
 .grid-item {
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.grid-item:hover video {
+    transform: scale(1.05);
+}
+
+.grid-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-family: 'Lexend', Arial, sans-serif;
 }
 
 .grid-item-header {
@@ -237,28 +262,27 @@ video {
     /* Grid en columna para móvil */
     .grid-container {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(6, auto);
         width: 100%;
         height: auto;
         margin: 40px 0;
         margin-left: 0;
+        gap: 20px;
+        padding: 15px;
     }
     
     .grid-item {
-        height: 50vh;
+        height: auto;
     }
     
     .grid-item video {
-        object-fit: contain;
-        background: #000;
+        height: 250px;
+        object-fit: cover;
     }
     
-    /* Web grid en columna para móvil */
-    .web-grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
-        gap: 15px;
-        padding: 0 15px;
+    .grid-title {
+        font-size: 1.1rem;
+        margin-top: 10px;
     }
 }
 
@@ -278,31 +302,27 @@ video {
     /* Grid en columna para móviles pequeños */
     .grid-container {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(6, auto);
         width: 100%;
         height: auto;
         margin: 40px 0;
         margin-left: 0;
-
+        gap: 15px;
+        padding: 10px;
     }
     
     .grid-item {
-        height: 40vh;
+        height: auto;
     }
-
-   
     
     .grid-item video {
-        object-fit: contain;
-        background: #000;
+        height: 200px;
+        object-fit: cover;
     }
     
-    /* Web grid en columna para móviles pequeños */
-    .web-grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
-        gap: 10px;
-        padding: 0 10px;
+    .grid-title {
+        font-size: 1rem;
+        margin-top: 8px;
     }
 }
 
