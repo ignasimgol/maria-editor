@@ -37,7 +37,7 @@ a {
 }
 
 a:hover {
-    color: #b6e10a;
+    color: #ffde59;
 }
 
 /* Header */
@@ -62,7 +62,7 @@ nav {
 }
 
 .logo-link:hover {
-    color: #b6e10a;
+    color: #ffde59;
 }
 
 .social-links {
@@ -82,7 +82,7 @@ nav {
 }
 
 .social-link:hover {
-    color: #b6e10a;
+    color: #ffde59;
 }
 
 .icon {
@@ -374,7 +374,7 @@ video {
     width: 50px;
     height: 50px;
     border: 3px solid rgba(255, 255, 255, 0.3);
-    border-top: 3px solid #b6e10a;
+    border-top: 3px solid #ffde59;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: 0 auto 20px;
