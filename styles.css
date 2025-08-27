@@ -48,8 +48,26 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+    color: #b6e10a;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
 }
 
 .social-link {
@@ -172,10 +190,10 @@ p {
 }
 
 .grid-item-header {
-    margin-top: 40px;
+    margin-top: 10px;
     overflow: hidden;
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px; /* Aumentado de 800px a 1000px */
     margin-left: auto;
     margin-right: auto;
 }
