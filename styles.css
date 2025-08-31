@@ -204,6 +204,10 @@ p {
     margin-right: auto;
 }
 
+.grid-item-header p {
+    margin-bottom: 10px;
+}
+
 .grid-item-header video {
     width: 100%;
     height: auto;
