@@ -215,3 +215,34 @@ function smoothScroll(target) {
         block: 'start'
     });
 }
+
+// Funcionalidad del menú hamburguesa
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const socialLinks = document.getElementById('social-links');
+    
+    if (hamburgerMenu && socialLinks) {
+        hamburgerMenu.addEventListener('click', function() {
+            // Toggle clases activas
+            hamburgerMenu.classList.toggle('active');
+            socialLinks.classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer click en un enlace
+        const socialLinksItems = socialLinks.querySelectorAll('.social-link');
+        socialLinksItems.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburgerMenu.classList.remove('active');
+                socialLinks.classList.remove('active');
+            });
+        });
+        
+        // Cerrar menú al hacer click fuera de él
+        document.addEventListener('click', function(event) {
+            if (!hamburgerMenu.contains(event.target) && !socialLinks.contains(event.target)) {
+                hamburgerMenu.classList.remove('active');
+                socialLinks.classList.remove('active');
+            }
+        });
+    }
+});
